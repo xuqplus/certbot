@@ -1,0 +1,8 @@
+accounts/
+archive/
+csr/
+live/
+keys/
+renewal/
+renewal-hooks/
+.bash_history

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd certs && ls|grep -v cert|xargs rm -r
+cd ..
+
+docker stop gateway
+docker run -it --rm -v $(pwd)/certs:/etc/letsencrypt -p 80:80 -p 443:443 certbot /etc/letsencrypt/cert
+
+docker start gateway
+docker cp certs/ gateway:/etc/nginx/

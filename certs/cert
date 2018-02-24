@@ -1,0 +1,9 @@
+#!/bin/bash
+certbot certonly \
+	 -d xuqplus.space \
+	 -d www.xuqplus.space \
+	 -d wx.xuqplus.space \
+	 -d api.xuqplus.space \
+	 -d test.xuqplus.space \
+	 -d idea-lic.xuqplus.space \
+	 -m 445172495@qq.com --agree-tos --standalone
